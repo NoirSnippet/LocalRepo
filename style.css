@@ -1,5 +1,209 @@
-h1{
-    background-color: rgb(88, 39, 140);
-    font-size: 50px;
-    color: rgb(239, 35, 35);
+/* ---------------- RESET ---------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    color: #222;
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+/* ---------------- HEADER ---------------- */
+header section:first-child {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* VIDEO */
+.full-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* VIDEO OVERLAY */
+header section:first-child > div > div {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+.logo {
+    width: 290px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 3.7rem;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1.7rem;
+    opacity: 0.9;
+}
+
+/* ---------------- HEADER INFO SECTION ---------------- */
+header section:nth-child(2) {
+    padding: 70px 20px;
+    background: #fff;
+    text-align: center;
+}
+
+header section:nth-child(2) h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+header section:nth-child(2) p {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: #555;
+}
+
+header section:nth-child(2) ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+header section:nth-child(2) li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* ---------------- MAIN ---------------- */
+main section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* FEATURES SECTION */
+main section:first-child h1 {
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+}
+
+main section:first-child p {
+    color: #555;
+}
+
+main section:first-child ul {
+    margin-top: 40px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+main section:first-child li {
+    background: #f2f2f2;
+    padding: 12px 22px;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    transition: background 0.3s;
+}
+
+main section:first-child li:hover {
+    background: #e23744;
+    color: #fff;
+}
+
+/* ---------------- APP CARDS ---------------- */
+main section:nth-child(2) > div {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.app-card {
+    width: 260px;
+    padding: 30px 20px;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.app-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.app-card img {
+    width: 150px;
+    margin-bottom: 15px;
+}
+
+.app-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.app-card p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+    background: #000;
+    color: #fff;
+    padding: 70px 20px 30px;
+    text-align: center;
+}
+
+footer section div:first-child {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+footer section div:nth-child(2) {
+    margin: 15px 0 30px;
+    color: #ccc;
+}
+
+footer img {
+    margin: 10px;
+    cursor: pointer;
+}
+
+footer p {
+    margin-top: 40px;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    header section:nth-child(2) ul {
+        gap: 20px;
+    }
+
+    main section:first-child ul {
+        gap: 10px;
+    }
 }
